@@ -15,6 +15,8 @@ class BlogItemDetails extends Component {
     const {match} = this.props
     const {params} = match
     const {id} = params
+
+     // FIX18: The API call for the individual blog details should be done using the blog id as a path parameter in the apiUrl
     const response = await fetch(`https://apis.ccbp.in/blogs/${id}`)
     const data = await response.json()
     const updatedData = {
